@@ -53,10 +53,12 @@ div {
 	font-size: 4vw;
 }
 
+
 header #navigation ul {
 	text-align: center;
 	list-style-type: none;
 	font-size: 2vw;
+	font-weight: bold;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
@@ -93,7 +95,7 @@ header #navigation ul li:hover {
 
 #firstsi {
 	float: right;
-	margin-left: 25vw;
+	margin-left: 20vw;
 }
 
 .social {
