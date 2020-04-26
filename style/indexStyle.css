@@ -25,6 +25,11 @@ body {
 	font-size: 20px;
 }
 
+::selection {
+	background: white;
+	color: black;
+}
+
 header {
 	background-color: black;
 	text-align: center;
@@ -74,9 +79,17 @@ header div ul li:hover {
 	color: inherit;
 	text-decoration: none;
 }
+.NavBarBut::selection {
+	color: white;
+	background: black;
+}
 
 #intro {
 	text-align: justify;
 	margin: 0px 8vw;
 
+}
+
+#nestedlist {
+	list-style-type: none;
 }
