@@ -53,16 +53,16 @@ div {
 	font-size: 4vw;
 }
 
-header div ul {
+header #navigation ul {
 	text-align: center;
 	list-style-type: none;
 	font-size: 2vw;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
+	background-color: black;
 }
-
-header div ul li {
+header #navigation ul li {
 	float: left;
 	padding: 1vw 2vw;
 	border: 1px solid black;
@@ -70,7 +70,7 @@ header div ul li {
 	transition: all;
 	transition-duration: 0.5s;
 }
-header div ul li:hover {
+header #navigation ul li:hover {
 	background-color: white;
 	color: black;
 }
@@ -90,6 +90,26 @@ header div ul li:hover {
 
 }
 
-#nestedlist {
-	list-style-type: none;
+
+#firstsi {
+	float: right;
+	margin-left: 25vw;
 }
+
+.social {
+	width: 2vw;
+	padding-top: center;
+}
+.sociallist {
+	padding-left: 0;
+}
+
+#foot {
+	font-size: 20px;
+	text-align: center;
+	margin: 5vw 9vw;
+}
+
+
+
+
