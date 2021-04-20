@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1360, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/indexStyle.css">
+    <title>Document</title>
+</head>
+
+<body onscroll="onScrollEventFunction()">
+    <div id="mousePointer">
+    </div>
+
+    <div id="navigator">
+        <div id="navigatorList" onmouseover="expandNavigator();cursorHide()" onmouseout="shrinkNavigator();cursorShow()">
+            <div class="positionLink" onclick="navigatorPosition(0)">Home</div>
+            <div class="positionLink" onclick="navigatorPosition(1)">About Me</div>
+            <div class="positionLink" onclick="navigatorPosition(2)">Python Projects</div>
+            <div class="positionLink" onclick="navigatorPosition(3)">AI and Data Science Projects</div>
+        </div>
+
+    </div>
+    <div id="navigationArrow" class="noselect colorLight" onmouseover="expandNavigator()" onmouseout="shrinkNavigator()">
+        <i class="material-icons" onmouseover="cursorExpand()" onmouseout="cursorShrink()" onclick="navigatorPosition(0)">&#xe5ce;</i>
+    </div>
+
+
+    <header class="gradientBackground">
+        <div class="navbar change_color_on_scroll " id="navbar ">
+            <div class="navigation ">
+                <div class="heading bold noselect">
+                    <h2>
+                        My Portfolio
+                    </h2>
+                </div>
+                <div class="listContainer noselect">
+                    <ol>
+                        <li><a class="change_color_on_scroll " href=" " onmouseover="cursorExpand()" onmouseout="cursorShrink()">My Resume</a></li>
+                        <li><a class="change_color_on_scroll " href=" " onmouseover="cursorExpand()" onmouseout="cursorShrink()">My Projects</a></li>
+                        <li><a class="change_color_on_scroll " href=" " onmouseover="cursorExpand()" onmouseout="cursorShrink()">Contact me</a></li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+        <div class=".scrollingText noselect">
+            <marquee behavior="scroll" direction="left">
+                <spam>H</spam>
+                <spam>E</spam>
+                <spam>L</spam>
+                <spam>L</spam>
+                <spam>O</spam>
+                <spam>&nbsp</spam>
+                <spam>W</spam>
+                <spam>E</spam>
+                <spam>L</spam>
+                <spam>C</spam>
+                <spam>O</spam>
+                <spam>M</spam>
+                <spam>E</spam>
+                <spam>&nbsp</spam>
+                <spam>T</spam>
+                <spam>O</spam>
+                <spam>&nbsp</spam>
+                <spam>M</spam>
+                <spam>Y</spam>
+                <spam>&nbsp</spam>
+                <spam>S</spam>
+                <spam>I</spam>
+                <spam>T</spam>
+                <spam>E</spam>
+            </marquee>
+        </div>
+        <div class="profileImageContainer gradientBackgroundInverted noselect">
+            <img src="data/profilePic.jpg " alt="JIMMYKUMAR AHALPARA">
+        </div>
+        <h1 class="name noselect">
+            <spam>J</spam>
+            <spam>I</spam>
+            <spam>M</spam>
+            <spam>M</spam>
+            <spam>Y</spam>
+            <spam>K</spam>
+            <spam>U</spam>
+            <spam>M</spam>
+            <spam>A</spam>
+            <spam>R</spam>
+            <spam>&nbsp</spam>
+            <spam>A</spam>
+            <spam>H</spam>
+            <spam>A</spam>
+            <spam>L</spam>
+            <spam>P</spam>
+            <spam>A</spam>
+            <spam>R</spam>
+            <spam>A</spam>
+        </h1>
+        <div id="typingText" class="noselect">
+            <h2 id="typingTextHeading" class="noselect"></h2>
+            <h2 class="cursor">
+                |
+            </h2>
+        </div>
+        <div class="downArrow noselect colorLight" onclick="scrollDown()">
+            <i class="material-icons" onmouseover="cursorExpand()" onmouseout="cursorShrink()">&#xe5cf;</i>
+        </div>
+    </header>
+
+    <div class="aboutMe">
+        <div class="container" id="container-1">
+            <h1>
+
+                <spam id="typingAboutMe" onmouseover="cursorExpandLarge()" onmouseout="cursorShrink()" class="noselect">...</spam>
+            </h1>
+        </div>
+        <div class="downArrow noselect colorDark" onclick="scrollDown()">
+            <i class="material-icons" onmouseover="cursorExpand()" onmouseout="cursorShrink()">&#xe5cf;</i>
+        </div>
+    </div>
+    <div class="anotherSection gradientBackground">
+        <h1 class="noselect">
+            <span class="anSeColChg">
+                <spam>S</spam>
+                <spam>O</spam>
+                <spam>M</spam>
+                <spam>E</spam>
+                <spam>&nbsp</spam>
+                <spam>O</spam>
+                <spam>F</spam>
+                <spam>&nbsp</spam>
+                <spam>M</spam>
+                <spam>Y</spam>
+                <spam>&nbsp</spam>
+                <spam>W</spam>
+                <spam>O</spam>
+                <spam>R</spam>
+                <spam>K</spam>
+                <spam>&nbsp</spam>
+                <spam>I</spam>
+                <spam>N</spam>
+                <spam>&nbsp</spam>
+            </span>
+            <spam class="python-theme">
+                <spam>P</spam>
+                <spam>Y</spam>
+                <spam>T</spam>
+                <spam>H</spam>
+                <spam>O</spam>
+                <spam>N</spam>
+            </spam>
+        </h1>
+        <div class="mainContainer noselect">
+            <div class="tiles" id="tile-1" onmouseover="cursorHide()" onmouseout="cursorShow()">
+
+                <spam class="tileText" id="tileText1">Billing applicatoin which can generate Order, Packing Slip. Features Autocomplete and persistant data storage on disk <br>
+                    <spam class="bolder">Python • Tkinter • FPDF</spam>
+                </spam>
+            </div>
+            <div class="tiles" id="tile-2" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <spam class="tileText" id="tileText2">3D rotating cube only using 2D graphics library pygame <br>
+                    <spam class="bolder">Python • Pygame</spam>
+                </spam>
+            </div>
+            <div class="tiles" id="tile-3" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <spam class="tileText" id="tileText3">2048 game using pygame
+                    <br>
+                    <spam class="bolder">Python • Pygame</spam>
+                </spam>
+            </div>
+            <div class="tiles" id="tile-4" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <spam class="tileText" id="tileText4">Block Burst - 3D blocks shooting game purely using pygame <br>
+                    <spam class="bolder">Python • Pygame</spam>
+                </spam>
+            </div>
+            <div class="tiles" id="tile-5" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <spam class="tileText" id="tileText5">Tank Game using pygame <br>
+                    <soan class="bolder">Python • Pygame</soan>
+                </spam>
+            </div>
+            <div class="tiles" id="tile-6" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <spam class="tileText" id="tileText6">Ant Game - Ant, Spider and Snake simulation game <br>
+                    <spam class="bolder">Python • Pygame</spam>
+                </spam>
+            </div>
+            <div class="tiles" id="tile-7" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <spam class="tileText" id="tileText7">Tic-Tac-Toe game in Tkinter <br>
+                    <spam class="bolder">Python • Tkinter</spam>
+                </spam>
+            </div>
+            <div class="tiles" id="tile-8" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <spam class="tileText" id="tileText8">Some of my games made at https://py3.codeskulptor.org <br>
+                    <spam class="bolder">Pygame • SimpleGUI</spam>
+                </spam>
+            </div>
+        </div>
+        <div class="downArrow noselect colorDark" onclick="scrollDown()">
+            <i class="material-icons" onmouseover="cursorExpand()" onmouseout="cursorShrink()">&#xe5cf;</i>
+        </div>
+        <div class="ProjectInformation">
+            <div class="ProjectInfoDetail noselect" onmouseout="shrinkPythonInfo()"><br>Hi, these games were some of the first project which I undertook. The reason I have kept them first is because these small projects have hugely contributed in my learning of basic computer programming. It takes huge effort to program even
+                a single dot on the screen. For some Games I showed, it becomes extremely difficult to program, if we don't use OOP. I think small games like these is really effective tool for any person to learn complex programming logic, and visual
+                element contributes to a persons motivation to try new things, rather than just printing text on the console.
+            </div>
+            <div class="ProjectInfoArrow" onclick="expandPythonInfo()" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <i class="material-icons">&#xe5cc;</i>
+            </div>
+        </div>
+    </div>
+    <div class="aiDataScienceSection gradientBackground">
+        <h1 class="noselect">
+            <spam>D</spam>
+            <spam>A</spam>
+            <spam>T</spam>
+            <spam>A</spam>
+            <spam>&nbsp</spam>
+            <spam>S</spam>
+            <spam>C</spam>
+            <spam>I</spam>
+            <spam>E</spam>
+            <spam>N</spam>
+            <spam>C</spam>
+            <spam>E</spam>
+            <spam>&nbsp</spam>
+            <spam>A</spam>
+            <spam>N</spam>
+            <spam>D</spam>
+            <spam>&nbsp</spam>
+            <spam>A</spam>
+            <spam>I</spam>
+            <spam>&nbsp</spam>
+            <spam>P</spam>
+            <spam>R</spam>
+            <spam>O</spam>
+            <spam>J</spam>
+            <spam>E</spam>
+            <spam>C</spam>
+            <spam>T</spam>
+            <spam>S</spam>
+        </h1>
+        <div class="aiTileContainer">
+            <div class="aiTiles" id="aiTiles-1" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
+            </div>
+            <div class="aiTiles" id="aiTiles-2" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
+            </div>
+            <div class="aiTiles" id="aiTiles-3" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
+            </div>
+            <div class="aiTiles" id="aiTiles-4" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
+            </div>
+            <div class="aiTiles" id="aiTiles-5" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
+            </div>
+            <div class="aiTiles" id="aiTiles-6" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
+            </div>
+            <div class="aiTiles" id="aiTiles-7" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
+            </div>
+            <div class="aiTiles" id="aiTiles-8" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
+            </div>
+        </div>
+        <div class="downArrow noselect colorDark" onclick="scrollDown()">
+            <i class="material-icons" onmouseover="cursorExpand()" onmouseout="cursorShrink()">&#xe5cf;</i>
+        </div>
+        <div class="ProjectInformation">
+            <div class="ProjectInfoDetail noselect" onmouseout="shrinkAiInfo()"><br>Hi, these games were some of the first project which I undertook. The reason I have kept them first is because these small projects have hugely contributed in my learning of basic computer programming. It takes huge effort to program even
+                a single dot on the screen. For some Games I showed, it becomes extremely difficult to program, if we don't use OOP. I think small games like these is really effective tool for any person to learn complex programming logic, and visual
+                element contributes to a persons motivation to try new things, rather than just printing text on the console.
+            </div>
+            <div class="ProjectInfoArrow" onclick="expandAiInfo()" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <i class="material-icons">&#xe5cc;</i>
+            </div>
+        </div>
+    </div>
+    <script src="JavaScript/indexScript.js"></script>
+</body>
+
+</html>
