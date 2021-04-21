@@ -14,7 +14,7 @@ mousePointer.classList.add("cursorLight")
 
 
 document.body.style.overflow = "hidden";
-let scrollPositions = [0, 680, 1480, 2280]
+let scrollPositions = [0, 680, 1480, 2280, 3080]
 let currentScrollPosition = 0;
 let scrollMoving = false;
 document.documentElement.scrollTop = scrollPositions[0];
@@ -153,6 +153,8 @@ function updateGradient(e) {
     document.querySelector(".aiDataScienceSection").style.background = "linear-gradient(" + profileBorderGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
 
 
+    document.querySelector(".webSection").style.background = "linear-gradient(" + profileBorderGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
+
 }
 
 
@@ -252,14 +254,20 @@ function onScrollEventFunction() {
         arr.style.color = clrLight;
 
 
-    } else if (this.scrollY > 2170) {
+    } else if (this.scrollY > 2170 & this.scrollY < 3050) {
         backgroundGradient0 = getComputedStyle(document.documentElement)
             .getPropertyValue('--header-background-0-3');
         backgroundGradient100 = getComputedStyle(document.documentElement)
             .getPropertyValue('--header-background-100-3');
         updateGradient(null);
 
-
+    } else if (this.scrollY >= 3050) {
+        console.log("LST");
+        backgroundGradient0 = getComputedStyle(document.documentElement)
+            .getPropertyValue('--header-background-0-4');
+        backgroundGradient100 = getComputedStyle(document.documentElement)
+            .getPropertyValue('--header-background-100-4');
+        updateGradient(null);
     } else {
         // let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
 

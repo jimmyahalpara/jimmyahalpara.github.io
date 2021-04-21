@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=1360, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="Styles/indexStyle.css">
-    <title>Document</title>
+    <link rel="icon" href="./data/logo.png" type="image/gif" sizes="300x300">
+    <title>JIMMY</title>
 </head>
 
 <body onscroll="onScrollEventFunction()">
@@ -20,6 +21,7 @@
             <div class="positionLink" onclick="navigatorPosition(1)">About Me</div>
             <div class="positionLink" onclick="navigatorPosition(2)">Python Projects</div>
             <div class="positionLink" onclick="navigatorPosition(3)">AI and Data Science Projects</div>
+            <div class="positionLink" onclick="navigatorPosition(4)">Web Development Projects</div>
         </div>
 
     </div>
@@ -200,9 +202,11 @@
             <i class="material-icons" onmouseover="cursorExpand()" onmouseout="cursorShrink()">&#xe5cf;</i>
         </div>
         <div class="ProjectInformation">
-            <div class="ProjectInfoDetail noselect" onmouseout="shrinkPythonInfo()"><br>Hi, these games were some of the first project which I undertook. The reason I have kept them first is because these small projects have hugely contributed in my learning of basic computer programming. It takes huge effort to program even
-                a single dot on the screen. For some Games I showed, it becomes extremely difficult to program, if we don't use OOP. I think small games like these is really effective tool for any person to learn complex programming logic, and visual
-                element contributes to a persons motivation to try new things, rather than just printing text on the console.
+            <div class="ProjectInfoDetail noselect" onmouseout="shrinkPythonInfo()"><br>Hi, these games were some of the first projects which I undertook. I have kept them first because these small projects have hugely contributed to my learning of basic computer programming. It takes a huge effort to program even a single
+                dot on the screen. For some Games I showed, it becomes extremely difficult to program if we don't use OOP. I think small games like these are an effective tool for any person to learn complex programming logic and visual element contributes
+                to a person's motivation to try new things, rather than just printing text on the console.
+
+
             </div>
             <div class="ProjectInfoArrow" onclick="expandPythonInfo()" onmouseover="cursorHide()" onmouseout="cursorShow()">
                 <i class="material-icons">&#xe5cc;</i>
@@ -240,44 +244,49 @@
             <spam>T</spam>
             <spam>S</spam>
         </h1>
-        <div class="aiTileContainer">
+        <div class="aiTileContainer noselect">
             <div class="aiTiles" id="aiTiles-1" onmouseover="cursorHide()" onmouseout="cursorShow()">
-                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
+                <spam class="aiTileText">Face recognition for Detecting pre registered faces and store time and date at which they appeared before camera <br>
+                    <spam class="bolder">Python • OpenCV • Face-Recognition</spam>
+                </spam>
             </div>
             <div class="aiTiles" id="aiTiles-2" onmouseover="cursorHide()" onmouseout="cursorShow()">
-                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
+                <spam class="aiTileText">Cat Detection using Classifier - project part of Course from deeplearning.ai <br>
+                    <spam class="bolder">Python • NumPy • SciPy • Matplotlib</spam>
+                </spam>
             </div>
             <div class="aiTiles" id="aiTiles-3" onmouseover="cursorHide()" onmouseout="cursorShow()">
-                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
+                <spam class="aiTileText">Handwritten Digits classification - using MNIST dataset. <br>
+                    <spam class="bolder">Python • Matplotlib • SciPy • PIL • Skimage</spam>
+                </spam>
             </div>
             <div class="aiTiles" id="aiTiles-4" onmouseover="cursorHide()" onmouseout="cursorShow()">
-                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
+                <spam class="aiTileText">Hand Gesture recognition to be used for contactless elevator operation <br>
+                    <spam class="bolder">Python • TensorFlow • OpenCV • NumPy</spam>
+                </spam>
             </div>
             <div class="aiTiles" id="aiTiles-5" onmouseover="cursorHide()" onmouseout="cursorShow()">
-                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
+                <spam class="aiTileText">Click here to visit my Kaggle Profile</spam>
             </div>
             <div class="aiTiles" id="aiTiles-6" onmouseover="cursorHide()" onmouseout="cursorShow()">
-                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
+                <spam class="aiTileText">Click here to see some more related projects on my Github</spam>
             </div>
-            <div class="aiTiles" id="aiTiles-7" onmouseover="cursorHide()" onmouseout="cursorShow()">
-                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
-            </div>
-            <div class="aiTiles" id="aiTiles-8" onmouseover="cursorHide()" onmouseout="cursorShow()">
-                <spam class="aiTileText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, est!</spam>
-            </div>
+
         </div>
         <div class="downArrow noselect colorDark" onclick="scrollDown()">
             <i class="material-icons" onmouseover="cursorExpand()" onmouseout="cursorShrink()">&#xe5cf;</i>
         </div>
         <div class="ProjectInformation">
-            <div class="ProjectInfoDetail noselect" onmouseout="shrinkAiInfo()"><br>Hi, these games were some of the first project which I undertook. The reason I have kept them first is because these small projects have hugely contributed in my learning of basic computer programming. It takes huge effort to program even
-                a single dot on the screen. For some Games I showed, it becomes extremely difficult to program, if we don't use OOP. I think small games like these is really effective tool for any person to learn complex programming logic, and visual
-                element contributes to a persons motivation to try new things, rather than just printing text on the console.
+            <div class="ProjectInfoDetail noselect" onmouseout="shrinkAiInfo()"><br>These are some of my projects which I did. Most of them are of the basic level project which I undertook when I started learning. Knowing python has facilitated me while doing these works, but still, this is just a starting. You can surely
+                come here later in a year, and you’ll find many more projects 😀
             </div>
             <div class="ProjectInfoArrow" onclick="expandAiInfo()" onmouseover="cursorHide()" onmouseout="cursorShow()">
                 <i class="material-icons">&#xe5cc;</i>
             </div>
         </div>
+    </div>
+    <div class="webSection">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita facilis numquam ipsam maxime iure quam rerum ipsa vitae quos, cupiditate, exercitationem, quibusdam perferendis dolorum magni sunt autem incidunt sequi fuga!
     </div>
     <script src="JavaScript/indexScript.js"></script>
 </body>
