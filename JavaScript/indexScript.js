@@ -6,6 +6,7 @@ let animatePersonalInfo = false;
 let aboutMeInFocus = false;
 let hideArrow = true;
 let shownNavigatorHelp = false;
+
 let mousePointer = document.getElementById("mousePointer")
 mousePointer.classList.add("cursorLight")
 
@@ -15,7 +16,7 @@ mousePointer.classList.add("cursorLight")
 
 
 document.body.style.overflow = "hidden";
-let scrollPositions = [0, 680, 1480, 2280, 3080, 3885]
+let scrollPositions = [0, 680, 1480, 2280, 3080, 3885, 4680]
 let currentScrollPosition = 0;
 let scrollMoving = false;
 document.documentElement.scrollTop = scrollPositions[0];
@@ -155,14 +156,22 @@ function updateGradient(e) {
 
     document.querySelector(".profileImageContainer").style.background = "linear-gradient(" + profileBorderGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
 
-    document.querySelector(".anotherSection").style.background = "linear-gradient(" + profileBorderGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
+    document.querySelector(".anotherSection").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
 
-    document.querySelector(".aiDataScienceSection").style.background = "linear-gradient(" + profileBorderGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
+    document.querySelector(".aiDataScienceSection").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
 
 
-    document.querySelector(".webSection").style.background = "linear-gradient(" + profileBorderGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
+    document.querySelector(".webSection").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
 
-    document.querySelector(".educationSection").style.background = "linear-gradient(" + profileBorderGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
+    document.querySelector(".educationSection").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
+
+    document.querySelector(".skillSection").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
+
+    document.querySelectorAll(".skillSection .skillContainer .skillTiles").forEach(element => {
+
+        element.style.background = document.querySelector(".profileImageContainer").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 50%, " + backgroundGradient100 + " 100%)";
+
+    });
 
 }
 
@@ -313,8 +322,8 @@ function onScrollEventFunction() {
 
         arr = document.getElementById("navigationArrow")
         arr.style.color = clrLight;
-    } else if (this.scrollY > 3720) {
-        console.log("NMNM");
+    } else if (this.scrollY >= 3720 & this.scrollY < 4545) {
+        // console.log("NMNM");
         let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
         backgroundGradient0 = getComputedStyle(document.documentElement)
             .getPropertyValue('--header-background-0-5');
@@ -330,8 +339,26 @@ function onScrollEventFunction() {
 
         mousePointer.classList.remove("cursorDark");
         mousePointer.classList.add("cursorLight");
+    } else if (this.scrollY > 4545) {
+        let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
+        backgroundGradient0 = getComputedStyle(document.documentElement)
+            .getPropertyValue('--header-background-0-6');
+        backgroundGradient100 = getComputedStyle(document.documentElement)
+            .getPropertyValue('--header-background-100-6');
+        updateGradient(null);
 
 
+
+
+        let clrLight = getComputedStyle(document.documentElement)
+            .getPropertyValue('--text-color-light');
+        elementsToChange[0].style.color = clrLight;
+        elementsToChange[1].style.color = clrLight;
+        elementsToChange[2].style.color = clrLight;
+        elementsToChange[3].style.color = clrLight;
+
+        mousePointer.classList.remove("cursorDark");
+        mousePointer.classList.add("cursorLight");
 
     } else {
         // let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
@@ -599,7 +626,7 @@ setInterval(() => {
                 document.getElementById("ME").style.animation = "none";
                 document.getElementById("ME").style.opacity = "0";
 
-            }, 2800);
+            }, 2500);
 
 
 
