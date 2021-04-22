@@ -963,7 +963,7 @@
         height: 50px;
         left: 142px;
         top: 4427px;
-        animation: BabyRun 10s infinite;
+        /* animation: BabyRun 10s infinite; */
         pointer-events: none;
     }
     

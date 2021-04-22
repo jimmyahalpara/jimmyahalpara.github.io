@@ -585,6 +585,7 @@ function shrinkWebInfo() {
 
 
 setInterval(() => {
+    document.getElementById("ME").style.animation = "BabyRun 10s infinite"
     document.getElementById("ME").src = "data/babyFace.png"
     document.getElementById("ME").style.height = "50px"
     document.getElementById("ME").style.top = "4240px"
