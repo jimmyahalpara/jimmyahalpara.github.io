@@ -5,6 +5,7 @@ let backgroundGradient100 = getComputedStyle(document.documentElement)
 let animatePersonalInfo = false;
 let aboutMeInFocus = false;
 let hideArrow = true;
+let shownNavigatorHelp = false;
 let mousePointer = document.getElementById("mousePointer")
 mousePointer.classList.add("cursorLight")
 
@@ -14,7 +15,7 @@ mousePointer.classList.add("cursorLight")
 
 
 document.body.style.overflow = "hidden";
-let scrollPositions = [0, 680, 1480, 2280, 3080]
+let scrollPositions = [0, 680, 1480, 2280, 3080, 3885]
 let currentScrollPosition = 0;
 let scrollMoving = false;
 document.documentElement.scrollTop = scrollPositions[0];
@@ -82,6 +83,9 @@ function shrinkNavigator() {
 
     el.style.display = "none"
     cursorShow()
+
+    // navigator help will not be shown now
+
 }
 
 function expandNavigator() {
@@ -90,6 +94,7 @@ function expandNavigator() {
     el.style.display = "flex"
     el.style.animation = "navigatorExpandAnimation 1s"
     el.style.animationFillMode = "forwards"
+    shownNavigatorHelp = true;
 
 
 }
@@ -119,8 +124,10 @@ function updateGradient(e) {
             arrowSel.style.animationFillMode = "forwards"
         } else {
             // console.log("hidden");
-            arrowSel.style.animation = "rotateArrowHide 1s"
-            arrowSel.style.animationFillMode = "forwards"
+            if (shownNavigatorHelp) {
+                arrowSel.style.animation = "rotateArrowHide 1s"
+                arrowSel.style.animationFillMode = "forwards"
+            }
 
         }
     } catch (TypeError) {}
@@ -154,6 +161,8 @@ function updateGradient(e) {
 
 
     document.querySelector(".webSection").style.background = "linear-gradient(" + profileBorderGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
+
+    document.querySelector(".educationSection").style.background = "linear-gradient(" + profileBorderGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
 
 }
 
@@ -211,6 +220,25 @@ function onScrollEventFunction() {
         arr.style.color = clrDrk;
 
 
+        // navigation help popup in about me sectoin on bottom right corner
+        if (!shownNavigatorHelp) {
+            arrowSel = document.getElementById("navigationArrow")
+            arrowSel.style.display = "flex";
+            arrowSel.style.animation = "rotateArrowShow 500ms ease-out"
+            arrowSel.style.animationFillMode = "forwards"
+            document.querySelector(".navigatorHelp span").style.display = "block"
+            setTimeout(() => {
+                document.querySelector(".navigatorHelp span").style.display = "none";
+                arrowSel.style.animation = "rotateArrowHide 1s"
+                arrowSel.style.animationFillMode = "forwards"
+                shownNavigatorHelp = true;
+            }, 10000);
+        }
+
+
+
+
+
 
         // if (this.scrollY > 670 || this.scrollY < 690) {
         //     document.body.style.overflow = "hidden";
@@ -233,6 +261,7 @@ function onScrollEventFunction() {
             .getPropertyValue('--header-background-0-2');
         backgroundGradient100 = getComputedStyle(document.documentElement)
             .getPropertyValue('--header-background-100-2');
+        animatePersonalInfo = false;
 
 
         updateGradient(null);
@@ -261,13 +290,49 @@ function onScrollEventFunction() {
             .getPropertyValue('--header-background-100-3');
         updateGradient(null);
 
-    } else if (this.scrollY >= 3050) {
-        console.log("LST");
+    } else if (this.scrollY >= 3050 & this.scrollY < 3720) {
+        // console.log("LST");
         backgroundGradient0 = getComputedStyle(document.documentElement)
             .getPropertyValue('--header-background-0-4');
         backgroundGradient100 = getComputedStyle(document.documentElement)
             .getPropertyValue('--header-background-100-4');
         updateGradient(null);
+
+
+        let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
+        let clrLight = getComputedStyle(document.documentElement)
+            .getPropertyValue('--text-color-light');
+        elementsToChange[0].style.color = clrLight;
+        elementsToChange[1].style.color = clrLight;
+        elementsToChange[2].style.color = clrLight;
+        elementsToChange[3].style.color = clrLight;
+
+        mousePointer.classList.remove("cursorDark");
+        mousePointer.classList.add("cursorLight");
+
+
+        arr = document.getElementById("navigationArrow")
+        arr.style.color = clrLight;
+    } else if (this.scrollY > 3720) {
+        console.log("NMNM");
+        let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
+        backgroundGradient0 = getComputedStyle(document.documentElement)
+            .getPropertyValue('--header-background-0-5');
+        backgroundGradient100 = getComputedStyle(document.documentElement)
+            .getPropertyValue('--header-background-100-5');
+        updateGradient(null);
+        let clrLight = getComputedStyle(document.documentElement)
+            .getPropertyValue('--text-color-light');
+        elementsToChange[0].style.color = clrLight;
+        elementsToChange[1].style.color = clrLight;
+        elementsToChange[2].style.color = clrLight;
+        elementsToChange[3].style.color = clrLight;
+
+        mousePointer.classList.remove("cursorDark");
+        mousePointer.classList.add("cursorLight");
+
+
+
     } else {
         // let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
 
@@ -489,4 +554,72 @@ function shrinkAiInfo() {
     ar.style.animation = "infoArrowRotateFront 1s"
     ar.style.animationFillMode = "forwards"
     document.querySelector(".aiDataScienceSection .ProjectInfoArrow").style.animation = "none";
+}
+
+
+// Websection
+
+function expandWebInfo() {
+    el = document.querySelector(".webSection .ProjectInfoDetail")
+    el.style.display = "flex"
+    el.style.animation = "ExpandProjectInformation 1s"
+    el.style.animationFillMode = "forwards"
+
+    ar = document.querySelector(".webSection .ProjectInfoArrow i");
+    ar.style.animation = "infoArrowRotateBack 1s"
+    ar.style.animationFillMode = "forwards"
+}
+
+function shrinkWebInfo() {
+    el = document.querySelector(".webSection .ProjectInfoDetail")
+    el.style.animation = "ShrinkProjectInformation 500ms"
+    el.style.animationFillMode = "forwards"
+    setTimeout(() => {
+        el.style.display = "none"
+    }, 500);
+    ar = document.querySelector(".webSection .ProjectInfoArrow i");
+    ar.style.animation = "infoArrowRotateFront 1s"
+    ar.style.animationFillMode = "forwards"
+    document.querySelector(".webSection .ProjectInfoArrow").style.animation = "none";
+}
+
+
+setInterval(() => {
+    document.getElementById("ME").src = "data/babyFace.png"
+    document.getElementById("ME").style.height = "50px"
+    document.getElementById("ME").style.top = "4240px"
+    setTimeout(() => {
+        document.getElementById("ME").src = "data/teenFace.png"
+
+        setTimeout(() => {
+            document.getElementById("ME").src = "data/adultFace.png"
+
+
+        }, 3000);
+    }, 3500);
+
+}, 10000);
+
+function showSchoolinfo() {
+    document.querySelector(".schoolInfoPopup").style.display = "block";
+}
+
+function hideSchoolinfo() {
+    document.querySelector(".schoolInfoPopup").style.display = "none";
+}
+
+function showHSchoolinfo() {
+    document.querySelector(".hschoolInfoPopup").style.display = "block";
+}
+
+function hideHSchoolinfo() {
+    document.querySelector(".hschoolInfoPopup").style.display = "none";
+}
+
+function showCollageinfo() {
+    document.querySelector(".collageInfoPopup").style.display = "block";
+}
+
+function hideCollageinfo() {
+    document.querySelector(".collageInfoPopup").style.display = "none";
 }

@@ -1,5 +1,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
     * {
         box-sizing: border-box;
         margin: 0;
@@ -8,7 +9,7 @@
     }
     
     html {
-        height: 4200px;
+        height: 4700px;
         scroll-behavior: smooth;
     }
     /* Variables */
@@ -25,6 +26,8 @@
         --header-background-100-3: red;
         --header-background-0-4: #000000;
         --header-background-100-4: #e84393;
+        --header-background-0-5: #200122;
+        --header-background-100-5: #940101;
         /* --------------------- */
         --header-background-light: rgb(128, 255, 176);
         --text-color-dark: black;
@@ -90,7 +93,7 @@
             height: 0px;
         }
         100% {
-            height: 190px;
+            height: 210px;
         }
     }
     
@@ -257,13 +260,13 @@
         align-content: center;
     }
     
-    header marquee spam:hover {
+    header marquee span:hover {
         /* animation: marqueeGrow 500ms;
     animation-fill-mode: forwards;
      */
         color: var(--text-color-light);
     }
-    /* header marquee spam:not(:hover) {
+    /* header marquee span:not(:hover) {
     animation: marqueeShrink 500ms;
     animation-fill-mode: forwards;
 }
@@ -294,7 +297,7 @@
         font-size: 5rem;
     }
     
-    header .name spam:hover {
+    header .name span:hover {
         color: transparent;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: var(--text-color-light);
@@ -350,6 +353,23 @@
         }
     }
     /* about me section */
+    /* 
+    
+    
+    
+    */
+    
+    .navigatorHelp span {
+        font-size: 2rem;
+        font-family: 'Handlee', cursive;
+        font-weight: bold;
+        width: 100px;
+        position: absolute;
+        right: 60px;
+        top: 1200px;
+        transform: rotate(-20deg);
+        display: none;
+    }
     
     .aboutMe {
         height: 800px;
@@ -389,19 +409,19 @@
         -webkit-text-stroke-color: var(--text-color-light)
     }
     
-    .anotherSection h1 .anSeColChg spam:nth-child(4n):hover {
+    .anotherSection h1 .anSeColChg span:nth-child(4n):hover {
         color: var(--color-1)
     }
     
-    .anotherSection h1 .anSeColChg spam:nth-child(4n+1):hover {
+    .anotherSection h1 .anSeColChg span:nth-child(4n+1):hover {
         color: var(--color-2)
     }
     
-    .anotherSection h1 .anSeColChg spam:nth-child(4n+2):hover {
+    .anotherSection h1 .anSeColChg span:nth-child(4n+2):hover {
         color: var(--color-3)
     }
     
-    .anotherSection h1 .anSeColChg spam:nth-child(4n+3):hover {
+    .anotherSection h1 .anSeColChg span:nth-child(4n+3):hover {
         color: var(--color-4)
     }
     
@@ -410,15 +430,15 @@
         text-shadow: 0px 0px 10px var(--text-color-dark);
     }
     
-    .python-theme spam:nth-child(2n) {
+    .python-theme span:nth-child(2n) {
         color: var(--python-color-blue);
     }
     
-    .python-theme spam:nth-child(2n+1) {
+    .python-theme span:nth-child(2n+1) {
         color: var(--python-color-yellow);
     }
     
-    .python-theme spam:hover {
+    .python-theme span:hover {
         -webkit-text-stroke-width: 0.25px;
         -webkit-text-stroke-color: var(--text-color-light)
     }
@@ -629,10 +649,24 @@
     .aiDataScienceSection h1 {
         color: var(--text-color-light);
         font-size: 3rem;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: var(--text-color-light)
     }
     
-    .aiDataScienceSection h1 span {
+    .aiDataScienceSection h1 span:hover {
+        text-shadow: 0px 0px 30px var(--text-color-dark);
+    }
+    
+    .aiDataScienceSection h1 span:hover:nth-child(3n) {
         color: red;
+    }
+    
+    .aiDataScienceSection h1 span:hover:nth-child(3n+1) {
+        color: blue;
+    }
+    
+    .aiDataScienceSection h1 span:hover:nth-child(3n+2) {
+        color: black;
     }
     
     .aiDataScienceSection .aiTileContainer {
@@ -678,7 +712,7 @@
     #aiTiles-4 {
         background-image: url("../data/handGestureClassificationProject.png");
         background-repeat: no-repeat;
-        background-size: contain;
+        background-Size: contain;
         background-position: center;
         background-color: var(--black-transparent);
     }
@@ -702,7 +736,7 @@
         display: block;
         height: 100%;
         width: 100%;
-        transition: border, background-color, color;
+        transition: background-color, color;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -735,7 +769,13 @@
         border: 2px solid var(--text-color-light);
         animation: none;
     }
-    /* WEB DEVELOPEMENT SECTOP */
+    /* WEB DEVELOPEMENT SETUP 
+    
+    
+    
+    
+    
+    */
     
     .webSection {
         background-color: red;
@@ -744,6 +784,254 @@
         justify-content: center;
         align-items: center;
         color: var(--text-color-light);
+        flex-direction: column;
+    }
+    
+    .webSection h1 {
+        font-size: 3rem;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: var(--text-color-light)
+    }
+    
+    .webSection h1 span:hover:nth-child(2n) {
+        color: red;
+    }
+    
+    .webSection h1 span:hover:nth-child(2n+1) {
+        color: black;
+    }
+    
+    .webSection .webTileContainer {
+        /* background-color: red; */
+        height: 400px;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .webSection .webTileContainer .webTiles {
+        /* border: 1px solid black; */
+        width: 25%;
+        height: 50%;
+        display: flex;
+        flex-wrap: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #webTile-1 {
+        background-image: url("../data/danceWebsiteProject.png");
+        background-size: contain;
+    }
+    
+    #webTile-2 {
+        background-image: url("../data/profilePageProject.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    #webTile-3 {
+        background-image: url("../data/plottingCoronaProject.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    #webTile-4 {
+        background-image: url("../data/foodWebpageProject.png");
+        background-size: cover;
+        background-position: center;
+    }
+    
+    #webTile-5 {
+        background-image: url("../data/gymHomepageProject.png");
+        background-size: cover;
+        /* background-position: center; */
+    }
+    
+    #webTile-6 {
+        background-image: url("../data/adminPortalProject.png");
+        background-size: cover;
+    }
+    
+    #webTile-7 {
+        background-image: url("../data/busTicketBookingHomepage.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: var(--text-color-dark);
+    }
+    
+    #webTile-8 {
+        background-image: url("../data/webpageRepoProject.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: var(--text-color-dark);
+    }
+    
+    .webSection .webTileContainer .webTileText {
+        padding: 20px 20px 0px 20px;
+        display: block;
+        height: 100%;
+        width: 100%;
+        transition: background-color, color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: var(--transparent);
+        transition-duration: 500ms;
+        text-align: center;
+    }
+    
+    .webSection .webTileContainer .webTileText:hover {
+        color: var(--text-color-light);
+        background-color: var(--black-transparent-little);
+        border: 2px solid var(--text-color-light);
+    }
+    
+    .webSection .ProjectInfoArrow {
+        color: var(--text-color-light);
+        border: var(--text-color-dark);
+    }
+    
+    .webSection .ProjectInfoArrow:hover {
+        border: 2px solid var(--text-color-light);
+        animation: none;
+    }
+    
+    .webSection .downArrow i {
+        color: var(--text-color-light);
+    }
+    /* EDUCATION QUALIFICATION SECTION */
+    
+    .educationSection {
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .educationSection h1 {
+        color: var(--text-color-light);
+        font-size: 3rem;
+    }
+    
+    .educationSection .educationSectionContainer {
+        height: 400px;
+        width: 90%;
+        /* border: 1px solid white; */
+    }
+    
+    .educationSection .downArrow i {
+        color: var(--text-color-light);
+    }
+    
+    .educationSection svg {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .educationSection #School {
+        height: 150px;
+        position: absolute;
+        left: 250px;
+        top: 4150px;
+    }
+    
+    .educationSection #HSchool {
+        height: 150px;
+        position: absolute;
+        left: 590px;
+        top: 4150px;
+    }
+    
+    .educationSection #Collage {
+        height: 200px;
+        position: absolute;
+        left: 800px;
+        top: 4130px;
+    }
+    
+    .educationSection #ME {
+        position: absolute;
+        height: 50px;
+        left: 142px;
+        top: 4427px;
+        animation: BabyRun 10s infinite;
+        pointer-events: none;
+    }
+    
+    @keyframes BabyRun {
+        0% {
+            opacity: 1;
+            left: 142px;
+            top: 4427px;
+        }
+        30% {
+            left: 142px;
+            top: 4240px;
+        }
+        50% {
+            left: 345px;
+            top: 4240px;
+        }
+        70% {
+            left: 640px;
+            top: 4240px;
+        }
+        95% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            left: 940px;
+            top: 4240px;
+        }
+    }
+    
+    .educationSection .schoolInfoPopup {
+        width: 200px;
+        height: 150px;
+        color: var(--text-color-light);
+        background-color: var(--black-transparent-little);
+        border: 2px solid black;
+        position: absolute;
+        top: 4020px;
+        left: 270px;
+        text-align: center;
+        display: none;
+    }
+    
+    .educationSection .hschoolInfoPopup {
+        width: 200px;
+        height: 150px;
+        color: var(--text-color-light);
+        background-color: var(--black-transparent-little);
+        border: 2px solid black;
+        position: absolute;
+        top: 4320px;
+        left: 570px;
+        text-align: center;
+        display: none;
+    }
+    
+    .educationSection .collageInfoPopup {
+        width: 250px;
+        height: 180px;
+        color: var(--text-color-light);
+        background-color: var(--black-transparent-little);
+        border: 2px solid black;
+        position: absolute;
+        top: 3990px;
+        left: 845px;
+        text-align: center;
+        display: none;
     }
     /*  
     
