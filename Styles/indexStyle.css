@@ -997,12 +997,12 @@
     
     .educationSection .schoolInfoPopup {
         width: 200px;
-        height: 150px;
+        height: 100px;
         color: var(--text-color-light);
         background-color: var(--black-transparent-little);
         border: 2px solid black;
         position: absolute;
-        top: 4020px;
+        top: 4060px;
         left: 270px;
         text-align: center;
         display: none;
@@ -1010,7 +1010,7 @@
     
     .educationSection .hschoolInfoPopup {
         width: 200px;
-        height: 150px;
+        height: 100px;
         color: var(--text-color-light);
         background-color: var(--black-transparent-little);
         border: 2px solid black;
@@ -1023,12 +1023,12 @@
     
     .educationSection .collageInfoPopup {
         width: 250px;
-        height: 180px;
+        height: 140px;
         color: var(--text-color-light);
         background-color: var(--black-transparent-little);
         border: 2px solid black;
         position: absolute;
-        top: 3990px;
+        top: 4020px;
         left: 845px;
         text-align: center;
         display: none;

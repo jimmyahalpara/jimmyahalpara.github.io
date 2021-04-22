@@ -585,7 +585,8 @@ function shrinkWebInfo() {
 
 
 setInterval(() => {
-    document.getElementById("ME").style.animation = "BabyRun 10s infinite"
+    document.getElementById("ME").style.animation = "BabyRun 10s"
+    document.getElementById("ME").style.opacity = "1";
     document.getElementById("ME").src = "data/babyFace.png"
     document.getElementById("ME").style.height = "50px"
     document.getElementById("ME").style.top = "4240px"
@@ -594,6 +595,12 @@ setInterval(() => {
 
         setTimeout(() => {
             document.getElementById("ME").src = "data/adultFace.png"
+            setTimeout(() => {
+                document.getElementById("ME").style.animation = "none";
+                document.getElementById("ME").style.opacity = "0";
+
+            }, 2800);
+
 
 
         }, 3000);
