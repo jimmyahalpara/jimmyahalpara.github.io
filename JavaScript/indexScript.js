@@ -15,8 +15,8 @@ mousePointer.classList.add("cursorLight")
 
 
 
-document.body.style.overflow = "hidden";
-let scrollPositions = [0, 680, 1480, 2280, 3080, 3885, 4680]
+// document.body.style.overflow = "hidden";
+let scrollPositions = [0, 680, 1480, 2280, 3080, 3885, 4680, 5480, 6274]
 let currentScrollPosition = 0;
 let scrollMoving = false;
 document.documentElement.scrollTop = scrollPositions[0];
@@ -152,6 +152,8 @@ function updateGradient(e) {
     backgroundGradientAngle = Math.floor(backgroundGradientAngle);
     let profileBorderGradientAngle = 326 + (xMouseRatio * 180);
 
+
+
     document.querySelector("header").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
 
     document.querySelector(".profileImageContainer").style.background = "linear-gradient(" + profileBorderGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
@@ -167,11 +169,22 @@ function updateGradient(e) {
 
     document.querySelector(".skillSection").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
 
+
+
+
     document.querySelectorAll(".skillSection .skillContainer .skillTiles").forEach(element => {
 
         element.style.background = document.querySelector(".profileImageContainer").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 50%, " + backgroundGradient100 + " 100%)";
 
     });
+    document.querySelectorAll(".certificateSection .certificateContainer .certificateSelector .certiTiles").forEach(element => {
+
+        element.style.background = document.querySelector(".profileImageContainer").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 50%, " + backgroundGradient100 + " 100%)";
+
+    });
+
+    document.querySelector(".certificateSection").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
+
 
 }
 
@@ -339,7 +352,7 @@ function onScrollEventFunction() {
 
         mousePointer.classList.remove("cursorDark");
         mousePointer.classList.add("cursorLight");
-    } else if (this.scrollY > 4545) {
+    } else if (this.scrollY >= 4545 & this.scrollY < 5200) {
         let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
         backgroundGradient0 = getComputedStyle(document.documentElement)
             .getPropertyValue('--header-background-0-6');
@@ -359,6 +372,43 @@ function onScrollEventFunction() {
 
         mousePointer.classList.remove("cursorDark");
         mousePointer.classList.add("cursorLight");
+    } else if (this.scrollY >= 5200 & this.scrollY < 6000) {
+        let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
+        backgroundGradient0 = getComputedStyle(document.documentElement)
+            .getPropertyValue('--header-background-0-7');
+        backgroundGradient100 = getComputedStyle(document.documentElement)
+            .getPropertyValue('--header-background-100-7');
+        updateGradient(null);
+
+
+
+
+        let clrLight = getComputedStyle(document.documentElement)
+            .getPropertyValue('--text-color-light');
+        elementsToChange[0].style.color = clrLight;
+        elementsToChange[1].style.color = clrLight;
+        elementsToChange[2].style.color = clrLight;
+        elementsToChange[3].style.color = clrLight;
+
+        mousePointer.classList.remove("cursorDark");
+        mousePointer.classList.add("cursorLight");
+
+    } else if (this.scrollY >= 6000) {
+        let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
+        let clrDrk = getComputedStyle(document.documentElement)
+            .getPropertyValue('--text-color-dark');
+        elementsToChange[0].style.color = clrDrk;
+        elementsToChange[1].style.color = clrDrk;
+        elementsToChange[2].style.color = clrDrk;
+        elementsToChange[3].style.color = clrDrk;
+        animatePersonalInfo = true;
+
+        mousePointer.classList.remove("cursorLight");
+        mousePointer.classList.add("cursorDark");
+
+
+        arr = document.getElementById("navigationArrow")
+        arr.style.color = clrDrk;
 
     } else {
         // let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
@@ -610,6 +660,30 @@ function shrinkWebInfo() {
     document.querySelector(".webSection .ProjectInfoArrow").style.animation = "none";
 }
 
+function expandCertificateInfo() {
+    el = document.querySelector(".certificateSection .ProjectInfoDetail")
+    el.style.display = "flex"
+    el.style.animation = "ExpandProjectInformation 1s"
+    el.style.animationFillMode = "forwards"
+
+    ar = document.querySelector(".certificateSection .ProjectInfoArrow i");
+    ar.style.animation = "infoArrowRotateBack 1s"
+    ar.style.animationFillMode = "forwards"
+}
+
+function shrinkCertificateInfo() {
+    el = document.querySelector(".certificateSection .ProjectInfoDetail")
+    el.style.animation = "ShrinkProjectInformation 500ms"
+    el.style.animationFillMode = "forwards"
+    setTimeout(() => {
+        el.style.display = "none"
+    }, 500);
+    ar = document.querySelector(".certificateSection .ProjectInfoArrow i");
+    ar.style.animation = "infoArrowRotateFront 1s"
+    ar.style.animationFillMode = "forwards"
+    document.querySelector(".certificateSection .ProjectInfoArrow").style.animation = "none";
+}
+
 
 setInterval(() => {
     document.getElementById("ME").style.animation = "BabyRun 10s"
@@ -658,3 +732,49 @@ function showCollageinfo() {
 function hideCollageinfo() {
     document.querySelector(".collageInfoPopup").style.display = "none";
 }
+
+
+function changeImage(number) {
+    console.log(document.querySelector("#certiViewer img"));
+    document.querySelector("#certiViewer img").src = "data/certificates/" + number + ".png"
+}
+
+function certificateOpen() {
+    window.open(document.querySelector("#certiViewer img").src);
+}
+
+
+
+// Animate final talk
+
+ttstringListAbout = ["Oh Hi again          ", "thanks for staying.          ", "Seriously,\t\t\t it means a lot.    ", "One last favor?      ", "Can you please give feeback some to this website?    ", "You can contact me using page below.  ", "Good Day👍 😀   "]
+ttstringListLengthAbout = ttstringListAbout.length;
+ttselectedStringAbout = 0
+
+ttcurrentStringAbout = ttstringListAbout[0];
+ttcurrentLengthAbout = ttcurrentStringAbout.length;
+ttprintedCharactersAbout = 0;
+tttypingAbout = true
+
+
+function updateFinalInfoAnimation() {
+    if (true) {
+        if ((ttprintedCharactersAbout <= ttcurrentLengthAbout) && (tttypingAbout)) {
+            document.getElementById("typingFinalTalk").innerHTML = ttcurrentStringAbout.substring(0, ttprintedCharactersAbout)
+            ttprintedCharactersAbout += 1;
+
+        } else if ((ttprintedCharactersAbout > ttcurrentLengthAbout) && (tttypingAbout)) {
+            tttypingAbout = false;
+
+        } else {
+            ttselectedStringAbout = (ttselectedStringAbout + 1) % ttstringListLengthAbout;
+            ttcurrentStringAbout = ttstringListAbout[ttselectedStringAbout];
+            ttcurrentLengthAbout = ttcurrentStringAbout.length;
+            ttprintedCharactersAbout = 0;
+            tttypingAbout = true;
+
+        }
+    }
+}
+
+setInterval(updateFinalInfoAnimation, 70);

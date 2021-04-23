@@ -9,7 +9,8 @@
     }
     
     html {
-        height: 5600px;
+        height: 7400px;
+        /* width: 100vw; */
         scroll-behavior: smooth;
     }
     /* Variables */
@@ -30,6 +31,10 @@
         --header-background-100-5: #940101;
         --header-background-0-6: #BA8B02;
         --header-background-100-6: #181818;
+        /* --header-background-0-7: #2C3E50;
+        --header-background-100-7: #FD746C; */
+        --header-background-0-7: #6A9113;
+        --header-background-100-7: #141517;
         /* --------------------- */
         --header-background-light: rgb(128, 255, 176);
         --text-color-dark: black;
@@ -88,6 +93,7 @@
         position: fixed;
         overflow: hidden;
         height: 0px;
+        z-index: 2;
     }
     
     @keyframes navigatorExpandAnimation {
@@ -95,7 +101,7 @@
             height: 0px;
         }
         100% {
-            height: 240px;
+            height: 295px;
         }
     }
     
@@ -124,6 +130,7 @@
         justify-content: center;
         align-items: center;
         opacity: 0.0;
+        z-index: 2;
     }
     
     #navigationArrow i {
@@ -371,6 +378,7 @@
         top: 1200px;
         transform: rotate(-20deg);
         display: none;
+        pointer-events: none;
     }
     
     .aboutMe {
@@ -1092,7 +1100,7 @@
     
     .skillSection .skillContainer .skillTiles {
         background-color: var(--text-color-light-little-transparent);
-        border: 6px solid var(--text-color-dark);
+        border: 2px solid var(--text-color-dark);
         /* border-radius: 90px; */
         border-radius: 70px;
         margin: 10px 5px;
@@ -1104,7 +1112,7 @@
     }
     
     .skillSection .skillContainer .skillTiles:hover {
-        border: 6px solid var(--text-color-light)
+        border: 2px solid var(--text-color-light)
     }
     
     .skillSection .skillContainer .skillTiles img {
@@ -1115,6 +1123,131 @@
     .skillSection .downArrow {
         color: var(--text-color-light);
         margin-top: 20px;
+    }
+    /* CERTIFICATE SECTION
+    
+    
+    */
+    
+    .certificateSection {
+        height: 800px;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .certificateSection h1 {
+        font-size: 3rem;
+        color: var(--text-color-light);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: var(--text-color-light)
+    }
+    
+    .certificateSection h1 span:hover:nth-child(2n) {
+        color: lightseagreen;
+    }
+    
+    .certificateSection h1 span:hover:nth-child(2n+1) {
+        color: midnightblue;
+    }
+    
+    .certificateSection .certificateContainer {
+        width: 90%;
+        height: 400px;
+        /* background-color: yellow; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .certificateSection .certificateContainer .certificateViewer {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+    }
+    
+    .certificateSection .certificateContainer .certificateViewer img {
+        max-height: 100%;
+        border: 2px solid var(--transparent);
+        padding: 10px 10px;
+    }
+    
+    .certificateSection .certificateContainer .certificateViewer img:hover {
+        border-color: var(--text-color-light);
+    }
+    
+    .certificateSection .certificateContainer .certificateSelector {
+        /* border: 1px solid black; */
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px 30px;
+    }
+    
+    .certificateSection .certificateContainer .certificateSelector .certiTiles {
+        border: 3px solid var(--text-color-dark);
+        border-radius: 20px;
+        width: 9%;
+        height: 7%;
+        margin: 0px 15px;
+    }
+    
+    .certificateSection .certificateContainer .certificateSelector .certiTiles:hover {
+        border-color: var(--text-color-light);
+    }
+    
+    .certificateSection .ProjectInfoArrow {
+        color: var(--text-color-light);
+        border: var(--text-color-dark);
+    }
+    
+    .certificateSection .ProjectInfoArrow:hover {
+        border: 2px solid var(--text-color-light);
+        animation: none;
+    }
+    
+    .certificateSection i {
+        color: var(--text-color-light);
+    }
+    /* Final talk section 
+    
+    
+    */
+    
+    .finalTalk {
+        /* background-color: red; */
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .finalTalk .finalTalkContainer {
+        /* background-color: yellow; */
+        width: 90%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .finalTalk i {
+        color: var(--text-color-dark);
+    }
+    
+    .finalTalk h1 {
+        font-size: 5rem;
+        text-align: center;
     }
     /*  
     

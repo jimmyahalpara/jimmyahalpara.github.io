@@ -24,6 +24,8 @@
             <div class="positionLink" onclick="navigatorPosition(4)">Web Development Projects</div>
             <div class="positionLink" onclick="navigatorPosition(5)">My Education</div>
             <div class="positionLink" onclick="navigatorPosition(6)">Techonologies and Skills</div>
+            <div class="positionLink" onclick="navigatorPosition(7)">Certificates</div>
+            <div class="positionLink" onclick="navigatorPosition(8)">Final Talk</div>
         </div>
 
     </div>
@@ -445,7 +447,7 @@
             <span>H</span>
         </h1>
 
-        <div class="skillContainer" onmouseover="cursorHide()" onmouseout="cursorShow()">
+        <div class="skillContainer" onmouseover="customCursor(10, 10, 5)" onmouseout="cursorShrink()">
             <div class="skillTiles" id="skillTile-1" onmouseover="skillsMouseover()" onmouseout="skillsMouseout()">
                 <img src="data/logos/python.png" alt="python">
             </div>
@@ -491,6 +493,91 @@
 
         </div>
 
+        <div class="downArrow noselect colorDark" onclick="scrollDown()">
+            <i class="material-icons" onmouseover="cursorExpand()" onmouseout="cursorShrink()">&#xe5cf;</i>
+        </div>
+    </div>
+    <div class="certificateSection">
+        <h1>
+            <span>S</span>
+            <span>O</span>
+            <span>M</span>
+            <span>E</span>
+            <span>&nbsp;</span>
+            <span>O</span>
+            <span>F</span>
+            <span>&nbsp;</span>
+            <span>T</span>
+            <span>H</span>
+            <span>E</span>
+            <span>&nbsp;</span>
+            <span>C</span>
+            <span>O</span>
+            <span>U</span>
+            <span>R</span>
+            <span>S</span>
+            <span>E</span>
+            <span>S</span>
+            <span>&nbsp;</span>
+            <span>I</span>
+            <span>&nbsp;</span>
+            <span>C</span>
+            <span>O</span>
+            <span>M</span>
+            <span>P</span>
+            <span>L</span>
+            <span>E</span>
+            <span>T</span>
+            <span>E</span>
+            <span>D</span>
+        </h1>
+        <div class="certificateContainer">
+            <div class="certificateViewer" id="certiViewer">
+                <img src="data/certificates/1.png" alt="CERTIFICATE" onclick="certificateOpen()" onmouseover="cursorHide()" onmouseout="cursorShow()">
+            </div>
+            <div class="certificateSelector">
+                <div class="certiTiles" id="certiTile-1" onmouseover="changeImage(1);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-2" onmouseover="changeImage(2);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-3" onmouseover="changeImage(3);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-4" onmouseover="changeImage(4);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-5" onmouseover="changeImage(5);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-6" onmouseover="changeImage(6);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-7" onmouseover="changeImage(7);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-8" onmouseover="changeImage(8);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-9" onmouseover="changeImage(9);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-10" onmouseover="changeImage(10);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-11" onmouseover="changeImage(11);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-12" onmouseover="changeImage(12);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-13" onmouseover="changeImage(13);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-14" onmouseover="changeImage(14);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-15" onmouseover="changeImage(15);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-16" onmouseover="changeImage(16);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-17" onmouseover="changeImage(17);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-18" onmouseover="changeImage(18);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+                <div class="certiTiles" id="certiTile-19" onmouseover="changeImage(19);customCursor(40, 40, 10)" onmouseout="cursorShrink()"></div>
+
+            </div>
+        </div>
+        <div class="ProjectInformation">
+            <div class="ProjectInfoDetail noselect" onmouseout="shrinkCertificateInfo()"><br>Some of my certificates that I received from courses I did. Coursera has been my primary place to do online course. Coursera and YouTube have contributed in my learning journey very much. Come back later and you’ll definitely see many
+                more such achievements here. <br> Tip: Hover over the dots on right to view or change certificates, click on the certificate to view larger image.
+
+            </div>
+            <div class="ProjectInfoArrow" onclick="expandCertificateInfo()" onmouseover="cursorHide()" onmouseout="cursorShow()">
+                <i class="material-icons">&#xe5cc;</i>
+            </div>
+        </div>
+        <div class="downArrow noselect colorDark" onclick="scrollDown()">
+            <i class="material-icons" onmouseover="cursorExpand()" onmouseout="cursorShrink()">&#xe5cf;</i>
+        </div>
+    </div>
+    <div class="finalTalk">
+        <div class="finalTalkContainer">
+            <h1>
+
+                <span id="typingFinalTalk" onmouseover="cursorExpandLarge()" onmouseout="cursorShrink()" class="noselect">...</span>
+            </h1>
+        </div>
         <div class="downArrow noselect colorDark" onclick="scrollDown()">
             <i class="material-icons" onmouseover="cursorExpand()" onmouseout="cursorShrink()">&#xe5cf;</i>
         </div>
