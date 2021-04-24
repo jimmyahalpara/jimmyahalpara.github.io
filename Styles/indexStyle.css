@@ -9,7 +9,7 @@
     }
     
     html {
-        height: 7400px;
+        height: 7700px;
         /* width: 100vw; */
         scroll-behavior: smooth;
     }
@@ -35,6 +35,10 @@
         --header-background-100-7: #FD746C; */
         --header-background-0-7: #6A9113;
         --header-background-100-7: #141517;
+        /* --header-background-0-8: #6441A5;
+        --header-background-100-8: #2a0845; */
+        --header-background-0-8: #000000;
+        --header-background-100-8: #434343;
         /* --------------------- */
         --header-background-light: rgb(128, 255, 176);
         --text-color-dark: black;
@@ -101,7 +105,7 @@
             height: 0px;
         }
         100% {
-            height: 295px;
+            height: 325px;
         }
     }
     
@@ -1248,6 +1252,82 @@
     .finalTalk h1 {
         font-size: 5rem;
         text-align: center;
+    }
+    /* Contact section
+    
+    
+    */
+    
+    .contactSection {
+        background-color: red;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--text-color-light);
+    }
+    
+    .contactSection h1 {
+        font-size: 3rem;
+    }
+    
+    .contactSection .contactContainer {
+        width: 70%;
+        height: 300px;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid black; */
+        flex-wrap: wrap;
+    }
+    
+    .contactContainer .socialIconContainer {
+        background-color: red;
+        border: 2px solid var(--text-color-dark);
+        border-radius: 40px;
+        width: 10%;
+        height: 30%;
+        margin: 20px 20px;
+        /* overflow: hidden; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contactContainer .socialIconContainer:hover {
+        border-color: var(--text-color-light);
+    }
+    
+    .socialIconContainer img {
+        width: 70%;
+    }
+    
+    #contactmeName {
+        font-weight: bolder;
+    }
+    
+    #contactmeName:hover {
+        animation: nameColorChangeAnimation 2s infinite;
+    }
+    
+    @keyframes nameColorChangeAnimation {
+        0% {
+            color: rgb(252, 79, 79);
+        }
+        25% {
+            color: rgb(255, 255, 77);
+        }
+        50% {
+            color: rgb(65, 65, 255);
+        }
+        75% {
+            color: rgb(36, 231, 36);
+        }
+        100% {
+            color: rgb(252, 79, 79);
+        }
     }
     /*  
     

@@ -3,6 +3,7 @@ let backgroundGradient0 = getComputedStyle(document.documentElement)
 let backgroundGradient100 = getComputedStyle(document.documentElement)
     .getPropertyValue('--header-background-100');
 let animatePersonalInfo = false;
+let animateFinalTalk = false;
 let aboutMeInFocus = false;
 let hideArrow = true;
 let shownNavigatorHelp = false;
@@ -15,8 +16,8 @@ mousePointer.classList.add("cursorLight")
 
 
 
-// document.body.style.overflow = "hidden";
-let scrollPositions = [0, 680, 1480, 2280, 3080, 3885, 4680, 5480, 6274]
+document.body.style.overflow = "hidden";
+let scrollPositions = [0, 680, 1480, 2280, 3080, 3885, 4680, 5480, 6274, 7070]
 let currentScrollPosition = 0;
 let scrollMoving = false;
 document.documentElement.scrollTop = scrollPositions[0];
@@ -182,8 +183,15 @@ function updateGradient(e) {
         element.style.background = document.querySelector(".profileImageContainer").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 50%, " + backgroundGradient100 + " 100%)";
 
     });
+    document.querySelectorAll(".contactContainer .socialIconContainer").forEach(element => {
+
+        element.style.background = document.querySelector(".profileImageContainer").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + "white" + " 0%, " + backgroundGradient100 + " 100%)";
+
+    });
 
     document.querySelector(".certificateSection").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
+
+    document.querySelector(".contactSection").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
 
 
 }
@@ -352,6 +360,8 @@ function onScrollEventFunction() {
 
         mousePointer.classList.remove("cursorDark");
         mousePointer.classList.add("cursorLight");
+        arr = document.getElementById("navigationArrow")
+        arr.style.color = clrLight;
     } else if (this.scrollY >= 4545 & this.scrollY < 5200) {
         let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
         backgroundGradient0 = getComputedStyle(document.documentElement)
@@ -372,6 +382,9 @@ function onScrollEventFunction() {
 
         mousePointer.classList.remove("cursorDark");
         mousePointer.classList.add("cursorLight");
+
+        arr = document.getElementById("navigationArrow")
+        arr.style.color = clrLight;
     } else if (this.scrollY >= 5200 & this.scrollY < 6000) {
         let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
         backgroundGradient0 = getComputedStyle(document.documentElement)
@@ -392,8 +405,12 @@ function onScrollEventFunction() {
 
         mousePointer.classList.remove("cursorDark");
         mousePointer.classList.add("cursorLight");
+        animateFinalTalk = false;
 
-    } else if (this.scrollY >= 6000) {
+
+        arr = document.getElementById("navigationArrow")
+        arr.style.color = clrLight;
+    } else if (this.scrollY >= 6000 & this.scrollY < 6900) {
         let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
         let clrDrk = getComputedStyle(document.documentElement)
             .getPropertyValue('--text-color-dark');
@@ -401,7 +418,7 @@ function onScrollEventFunction() {
         elementsToChange[1].style.color = clrDrk;
         elementsToChange[2].style.color = clrDrk;
         elementsToChange[3].style.color = clrDrk;
-        animatePersonalInfo = true;
+        animateFinalTalk = true;
 
         mousePointer.classList.remove("cursorLight");
         mousePointer.classList.add("cursorDark");
@@ -409,6 +426,31 @@ function onScrollEventFunction() {
 
         arr = document.getElementById("navigationArrow")
         arr.style.color = clrDrk;
+    } else if (this.scrollY > 6900) {
+        let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
+        backgroundGradient0 = getComputedStyle(document.documentElement)
+            .getPropertyValue('--header-background-0-8');
+        backgroundGradient100 = getComputedStyle(document.documentElement)
+            .getPropertyValue('--header-background-100-8');
+        updateGradient(null);
+
+
+
+
+        let clrLight = getComputedStyle(document.documentElement)
+            .getPropertyValue('--text-color-light');
+        elementsToChange[0].style.color = clrLight;
+        elementsToChange[1].style.color = clrLight;
+        elementsToChange[2].style.color = clrLight;
+        elementsToChange[3].style.color = clrLight;
+
+        mousePointer.classList.remove("cursorDark");
+        mousePointer.classList.add("cursorLight");
+
+        animateFinalTalk = false;
+
+        arr = document.getElementById("navigationArrow")
+        arr.style.color = clrLight;
 
     } else {
         // let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
@@ -758,7 +800,7 @@ tttypingAbout = true
 
 
 function updateFinalInfoAnimation() {
-    if (true) {
+    if (animateFinalTalk) {
         if ((ttprintedCharactersAbout <= ttcurrentLengthAbout) && (tttypingAbout)) {
             document.getElementById("typingFinalTalk").innerHTML = ttcurrentStringAbout.substring(0, ttprintedCharactersAbout)
             ttprintedCharactersAbout += 1;

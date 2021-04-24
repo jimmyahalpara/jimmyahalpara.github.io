@@ -15,7 +15,7 @@
     <div id="mousePointer">
     </div>
 
-    <div id="navigator">
+    <div id="navigator" class="noselect">
         <div id="navigatorList" onmouseover="expandNavigator();cursorHide()" onmouseout="shrinkNavigator();cursorShow()">
             <div class="positionLink" onclick="navigatorPosition(0)">Home</div>
             <div class="positionLink" onclick="navigatorPosition(1)">About Me</div>
@@ -26,6 +26,7 @@
             <div class="positionLink" onclick="navigatorPosition(6)">Techonologies and Skills</div>
             <div class="positionLink" onclick="navigatorPosition(7)">Certificates</div>
             <div class="positionLink" onclick="navigatorPosition(8)">Final Talk</div>
+            <div class="positionLink" onclick="navigatorPosition(9)">Contact ME</div>
         </div>
 
     </div>
@@ -44,9 +45,9 @@
                 </div>
                 <div class="listContainer noselect">
                     <ol>
-                        <li><a class="change_color_on_scroll " href=" " onmouseover="cursorExpand()" onmouseout="cursorShrink()">My Resume</a></li>
-                        <li><a class="change_color_on_scroll " href=" " onmouseover="cursorExpand()" onmouseout="cursorShrink()">My Projects</a></li>
-                        <li><a class="change_color_on_scroll " href=" " onmouseover="cursorExpand()" onmouseout="cursorShrink()">Contact me</a></li>
+                        <li><a class="change_color_on_scroll " onmouseover="cursorExpand()" onmouseout="cursorShrink()">My Resume</a></li>
+                        <li><a class="change_color_on_scroll " onmouseover="cursorExpand()" onmouseout="cursorShrink()" onclick="navigatorPosition(2)">My Projects</a></li>
+                        <li><a class="change_color_on_scroll " onmouseover="cursorExpand()" onmouseout="cursorShrink()" onclick="navigatorPosition(9)">Contact me</a></li>
                     </ol>
                 </div>
 
@@ -162,46 +163,49 @@
             </span>
         </h1>
         <div class="mainContainer noselect">
-            <div class="tiles" id="tile-1" onmouseover="cursorHide()" onmouseout="cursorShow()">
 
-                <span class="tileText" id="tileText1">Billing applicatoin which can generate Order, Packing Slip. Features Autocomplete and persistant data storage on disk <br>
-                    <span class="bolder">Python • Tkinter • FPDF</span>
-                </span>
-            </div>
             <div class="tiles" id="tile-2" onmouseover="cursorHide()" onmouseout="cursorShow()">
-                <span class="tileText" id="tileText2">3D rotating cube only using 2D graphics library pygame <br>
+                <span class="tileText" id="tileText2" onclick="window.open('https://github.com/jimmyahalpara/3D_rotating_cube_pygame')">3D rotating cube only using 2D graphics library pygame <br>
                     <span class="bolder">Python • Pygame</span>
                 </span>
             </div>
-            <div class="tiles" id="tile-3" onmouseover="cursorHide()" onmouseout="cursorShow()">
+
+            <div class="tiles" id="tile-3" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://github.com/jimmyahalpara/2048-game')">
                 <span class="tileText" id="tileText3">2048 game using pygame
                     <br>
                     <span class="bolder">Python • Pygame</span>
                 </span>
             </div>
-            <div class="tiles" id="tile-4" onmouseover="cursorHide()" onmouseout="cursorShow()">
+            <div class="tiles" id="tile-4" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://github.com/jimmyahalpara/block-burst')">
                 <span class="tileText" id="tileText4">Block Burst - 3D blocks shooting game purely using pygame <br>
                     <span class="bolder">Python • Pygame</span>
                 </span>
             </div>
-            <div class="tiles" id="tile-5" onmouseover="cursorHide()" onmouseout="cursorShow()">
+            <div class="tiles" id="tile-5" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://github.com/jimmyahalpara/tank-package')">
                 <span class="tileText" id="tileText5">Tank Game using pygame <br>
                     <span class="bolder">Python • Pygame</span>
                 </span>
             </div>
-            <div class="tiles" id="tile-6" onmouseover="cursorHide()" onmouseout="cursorShow()">
+
+            <div class="tiles" id="tile-6" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://github.com/jimmyahalpara/ant-game')">
                 <span class="tileText" id="tileText6">Ant Game - Ant, Spider and Snake simulation game <br>
                     <span class="bolder">Python • Pygame</span>
                 </span>
             </div>
-            <div class="tiles" id="tile-7" onmouseover="cursorHide()" onmouseout="cursorShow()">
+            <div class="tiles" id="tile-7" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://github.com/jimmyahalpara/Tic-Tac-Toe-with-Tkinter')">
                 <span class="tileText" id="tileText7">Tic-Tac-Toe game in Tkinter <br>
                     <span class="bolder">Python • Tkinter</span>
                 </span>
             </div>
-            <div class="tiles" id="tile-8" onmouseover="cursorHide()" onmouseout="cursorShow()">
+            <div class="tiles" id="tile-8" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://github.com/jimmyahalpara/codeskulptre-games')">
                 <span class="tileText" id="tileText8">Some of my games made at https://py3.codeskulptor.org <br>
                     <span class="bolder">Pygame • SimpleGUI</span>
+                </span>
+            </div>
+            <div class="tiles" id="tile-1" onmouseover="cursorHide()" onmouseout="cursorShow()">
+
+                <span class="tileText" id="tileText1">Billing applicatoin which can generate Order, Packing Slip. Features Autocomplete and persistant data storage on disk <br>
+                    <span class="bolder">Python • Tkinter • FPDF</span>
                 </span>
             </div>
         </div>
@@ -252,17 +256,17 @@
             <span>S</span>
         </h1>
         <div class="aiTileContainer noselect">
-            <div class="aiTiles" id="aiTiles-1" onmouseover="cursorHide()" onmouseout="cursorShow()">
+            <div class="aiTiles" id="aiTiles-1" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://github.com/jimmyahalpara/FR-for-CCTV')">
                 <span class="aiTileText">Face recognition for Detecting pre registered faces and store time and date at which they appeared before camera <br>
                     <span class="bolder">Python • OpenCV • Face-Recognition</span>
                 </span>
             </div>
-            <div class="aiTiles" id="aiTiles-2" onmouseover="cursorHide()" onmouseout="cursorShow()">
+            <div class="aiTiles" id="aiTiles-2" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://github.com/jimmyahalpara/Machine-and-Deep-Learning/tree/master/Cat%20Classification%20with%20Deep%20Neural%20Network')">
                 <span class="aiTileText">Cat Detection using Classifier - project part of Course from deeplearning.ai <br>
                     <span class="bolder">Python • NumPy • SciPy • Matplotlib</span>
                 </span>
             </div>
-            <div class="aiTiles" id="aiTiles-3" onmouseover="cursorHide()" onmouseout="cursorShow()">
+            <div class="aiTiles" id="aiTiles-3" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://github.com/jimmyahalpara/Machine-and-Deep-Learning/tree/master/Handwriting%20Classification%20using%20Deep%20Neural%20Network')">
                 <span class="aiTileText">Handwritten Digits classification - using MNIST dataset. <br>
                     <span class="bolder">Python • Matplotlib • SciPy • PIL • Skimage</span>
                 </span>
@@ -272,10 +276,10 @@
                     <span class="bolder">Python • TensorFlow • OpenCV • NumPy</span>
                 </span>
             </div>
-            <div class="aiTiles" id="aiTiles-5" onmouseover="cursorHide()" onmouseout="cursorShow()">
+            <div class="aiTiles" id="aiTiles-5" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://www.kaggle.com/jimmyahalpara')">
                 <span class="aiTileText">Click here to visit my Kaggle Profile</span>
             </div>
-            <div class="aiTiles" id="aiTiles-6" onmouseover="cursorHide()" onmouseout="cursorShow()">
+            <div class="aiTiles" id="aiTiles-6" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://github.com/jimmyahalpara/Machine-and-Deep-Learning')">
                 <span class="aiTileText">Click here to see some more related projects on my Github</span>
             </div>
 
@@ -325,33 +329,33 @@
             <span>S</span>
         </h1>
         <div class="webTileContainer" onmouseover="cursorHide()" onmouseout="cursorShow()">
-            <div class="webTiles" id="webTile-1">
+            <div class="webTiles" id="webTile-1" onclick="window.open('https://github.com/jimmyahalpara/Basic-WebPages/tree/master/55.%20Dance%20Website')">
                 <span class="webTileText">Dance Website with NodeJs backend and MongoDB for storage <span class="bolder"><br>
                     NodeJs • MongoDB • HTML • JavaScript • CSS
                 </span></span>
             </div>
-            <div class="webTiles" id="webTile-2">
+            <div class="webTiles" id="webTile-2" onclick="window.open('#')">
                 <span class="webTileText">The website which currently you are viewing <span class="bolder"><br>
                     HTML • CSS • JavaScript
                 </span></span>
             </div>
-            <div class="webTiles" id="webTile-3">
+            <div class="webTiles" id="webTile-3" onclick="window.open('https://jimmyahalpara.github.io/Basic-WebPages/58.%20Plotting%20COVID%20Cases/index.html')">
                 <span class="webTileText">COVID Cases mapping aroind the world using MapBox <br><span class="bolder">MapBox • HTML • CSS • JavaScript</span></span>
             </div>
-            <div class="webTiles" id="webTile-4">
+            <div class="webTiles" id="webTile-4" onclick="window.open('https://jimmyahalpara.github.io/Basic-WebPages/Project%202/index.html')">
                 <span class="webTileText">Fully Interactive Food Delivery Website <br><span class="bolder">HTML • CSS • JavaScript</span></span>
             </div>
-            <div class="webTiles" id="webTile-5">
+            <div class="webTiles" id="webTile-5" onclick="window.open('https://jimmyahalpara.github.io/Basic-WebPages/GYM%20Website/homePage.html')">
                 <span class="webTileText">GYM Website home page <br><span class="bolder">HTML • CSS • JavaScript</span></span>
             </div>
-            <div class="webTiles" id="webTile-6">
+            <div class="webTiles" id="webTile-6" onclick="window.open('https://jimmyahalpara.github.io/Basic-WebPages/adminPortal/firstPage.html')">
                 <span class="webTileText">Adming Portal First Page <br><span class="bolder">HTML • CSS • JavaScript</span></span>
             </div>
-            <div class="webTiles" id="webTile-7">
+            <div class="webTiles" id="webTile-7" onclick="window.open('https://jimmyahalpara.github.io/Basic-WebPages/BusBooking/homepage.html')">
                 <span class="webTileText">Bus Ticket Booking Website homepage <br><span class="bolder">HTML • CSS • JavaScript</span></span>
             </div>
-            <div class="webTiles" id="webTile-8">
-                <span class="webTileText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, ratione!</span>
+            <div class="webTiles" id="webTile-8" onclick="window.open('https://jimmyahalpara.github.io/Basic-WebPages/')">
+                <span class="webTileText">Some more of my work on Web Development</span>
             </div>
 
         </div>
@@ -366,7 +370,7 @@
             </div>
         </div>
     </div>
-    <div class="educationSection">
+    <div class="educationSection noselect">
         <h1>
             <span>M</span>
             <span>Y</span>
@@ -411,7 +415,7 @@
             <i class="material-icons" onmouseover="cursorExpand()" onmouseout="cursorShrink()">&#xe5cf;</i>
         </div>
     </div>
-    <div class="skillSection">
+    <div class="skillSection noselect">
         <h1>
             <span>T</span>
             <span>E</span>
@@ -497,7 +501,7 @@
             <i class="material-icons" onmouseover="cursorExpand()" onmouseout="cursorShrink()">&#xe5cf;</i>
         </div>
     </div>
-    <div class="certificateSection">
+    <div class="certificateSection noselect">
         <h1>
             <span>S</span>
             <span>O</span>
@@ -531,7 +535,7 @@
             <span>E</span>
             <span>D</span>
         </h1>
-        <div class="certificateContainer">
+        <div class="certificateContainer noselect">
             <div class="certificateViewer" id="certiViewer">
                 <img src="data/certificates/1.png" alt="CERTIFICATE" onclick="certificateOpen()" onmouseover="cursorHide()" onmouseout="cursorShow()">
             </div>
@@ -581,6 +585,34 @@
         <div class="downArrow noselect colorDark" onclick="scrollDown()">
             <i class="material-icons" onmouseover="cursorExpand()" onmouseout="cursorShrink()">&#xe5cf;</i>
         </div>
+    </div>
+    <div class="contactSection noselect">
+        <h1>Contact Me</h1>
+        <div class="contactContainer">
+            <div class="socialIconContainer" id="socialIcon-1" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('mailto:jimmyahalpara123@gmail.com')">
+                <img src="data/socialMedia/gmail.png" alt="GMAIL">
+            </div>
+            <div class="socialIconContainer" id="socialIcon-2" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://github.com/jimmyahalpara')">
+                <img src="data/socialMedia/github.png" alt="GITHUB">
+            </div>
+            <div class="socialIconContainer" id="socialIcon-3" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://www.linkedin.com/in/jkahalpara/')">
+                <img src="data/socialMedia/linkedin.png" alt="LINKEDIN">
+            </div>
+            <div class="socialIconContainer" id="socialIcon-4" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://www.facebook.com/profile.php?id=100005715345322')">
+                <img src="data/socialMedia/facebook.png" alt="FACEBOOK">
+            </div>
+            <div class="socialIconContainer" id="socialIcon-5" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://www.instagram.com/jimmyahalpara/')">
+                <img src="data/socialMedia/instagram.png" alt="INSTAGRAM">
+            </div>
+            <div class="socialIconContainer" id="socialIcon-6" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://twitter.com/JimmyAhalpara')">
+                <img src="data/socialMedia/twitter.png" alt="TWITTER">
+            </div>
+            <div class="socialIconContainer" id="socialIcon-7" onmouseover="cursorHide()" onmouseout="cursorShow()" onclick="window.open('https://www.kaggle.com/jimmyahalpara')">
+                <img src="data/socialMedia/Kaggle_logo.png" alt="KAGGLE">
+            </div>
+        </div>
+
+        <span>Made by <span id="contactmeName"> Jimmy Kumar Ahalpara </span></span>
     </div>
     <script src="JavaScript/indexScript.js"></script>
 </body>
