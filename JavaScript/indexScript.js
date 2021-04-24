@@ -16,7 +16,7 @@ mousePointer.classList.add("cursorLight")
 
 
 
-document.body.style.overflow = "hidden";
+// document.body.style.overflow = "hidden";
 let scrollPositions = [0, 680, 1480, 2280, 3080, 3885, 4680, 5480, 6274, 7070]
 let currentScrollPosition = 0;
 let scrollMoving = false;
@@ -319,6 +319,21 @@ function onScrollEventFunction() {
         backgroundGradient100 = getComputedStyle(document.documentElement)
             .getPropertyValue('--header-background-100-3');
         updateGradient(null);
+
+        let elementsToChange = document.getElementsByClassName("change_color_on_scroll");
+        let clrLight = getComputedStyle(document.documentElement)
+            .getPropertyValue('--text-color-light');
+        elementsToChange[0].style.color = clrLight;
+        elementsToChange[1].style.color = clrLight;
+        elementsToChange[2].style.color = clrLight;
+        elementsToChange[3].style.color = clrLight;
+
+        mousePointer.classList.remove("cursorDark");
+        mousePointer.classList.add("cursorLight");
+
+
+        arr = document.getElementById("navigationArrow")
+        arr.style.color = clrLight;
 
     } else if (this.scrollY >= 3050 & this.scrollY < 3720) {
         // console.log("LST");
