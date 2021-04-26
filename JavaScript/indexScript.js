@@ -16,7 +16,7 @@ mousePointer.classList.add("cursorLight")
 
 
 
-document.body.style.overflow = "hidden";
+// document.body.style.overflow = "hidden";
 let scrollPositions = [0, 680, 1480, 2280, 3080, 3885, 4680, 5480, 6274, 7070]
 let currentScrollPosition = 0;
 let scrollMoving = false;
@@ -156,7 +156,7 @@ function updateGradient(e) {
 
 
     document.querySelector("header").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
-
+    console.log(backgroundGradient0);
     document.querySelector(".profileImageContainer").style.background = "linear-gradient(" + profileBorderGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
 
     document.querySelector(".anotherSection").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + backgroundGradient0 + " 0%, " + backgroundGradient100 + " 100%)";
@@ -185,7 +185,7 @@ function updateGradient(e) {
     });
     document.querySelectorAll(".contactContainer .socialIconContainer").forEach(element => {
 
-        element.style.background = document.querySelector(".profileImageContainer").style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + "white" + " 0%, " + backgroundGradient100 + " 100%)";
+        element.style.background = "linear-gradient(" + backgroundGradientAngle + "deg, " + "white" + " 0%, " + backgroundGradient100 + " 100%)";
 
     });
 
