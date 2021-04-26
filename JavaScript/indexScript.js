@@ -16,7 +16,7 @@ mousePointer.classList.add("cursorLight")
 
 
 
-// document.body.style.overflow = "hidden";
+document.body.style.overflow = "hidden";
 let scrollPositions = [0, 680, 1480, 2280, 3080, 3885, 4680, 5480, 6274, 7070]
 let currentScrollPosition = 0;
 let scrollMoving = false;
