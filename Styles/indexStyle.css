@@ -137,6 +137,7 @@
         align-items: center;
         opacity: 0.0;
         z-index: 2;
+        text-shadow: 2px 2px 30px black, 2px -2px 30px black, -2px -2px 30px black, -2px 2px 30px black;
     }
     
     #navigationArrow i {
@@ -967,21 +968,21 @@
     }
     
     .educationSection #School {
-        height: 150px;
+        height: 23vh;
         position: absolute;
         left: 250px;
         top: 4150px;
     }
     
     .educationSection #HSchool {
-        height: 150px;
+        height: 23vh;
         position: absolute;
         left: 590px;
         top: 4150px;
     }
     
     .educationSection #Collage {
-        height: 200px;
+        height: 31vh;
         position: absolute;
         left: 800px;
         top: 4130px;
@@ -1026,12 +1027,13 @@
     
     .educationSection .schoolInfoPopup {
         width: 200px;
-        height: 100px;
+        height: 16vh;
         color: var(--text-color-light);
         background-color: var(--black-transparent-little);
         border: 2px solid black;
         position: absolute;
         top: 4060px;
+        /* top: 700vh; */
         left: 270px;
         text-align: center;
         display: none;
@@ -1039,7 +1041,7 @@
     
     .educationSection .hschoolInfoPopup {
         width: 200px;
-        height: 100px;
+        height: 16vh;
         color: var(--text-color-light);
         background-color: var(--black-transparent-little);
         border: 2px solid black;
@@ -1052,7 +1054,7 @@
     
     .educationSection .collageInfoPopup {
         width: 250px;
-        height: 140px;
+        height: 20vh;
         color: var(--text-color-light);
         background-color: var(--black-transparent-little);
         border: 2px solid black;
