@@ -835,3 +835,20 @@ function updateFinalInfoAnimation() {
 }
 
 setInterval(updateFinalInfoAnimation, 70);
+
+// --------------- WEB PROJECT POSITION -----
+positionsWeb = [0, 200];
+
+webSectionPosition = 0;
+sign = 1
+setInterval(() => {
+    sec = document.querySelector(".webSection .webTileContainer");
+
+    if (webSectionPosition == 1) {
+        sign = -1
+    } else if (webSectionPosition == 0) {
+        sign = 1
+    }
+    sec.scrollBy(0, 200 * sign);
+    webSectionPosition += sign;
+}, 5000);

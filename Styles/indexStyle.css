@@ -473,8 +473,9 @@
     
     .tiles {
         /* background-color: yellow; */
-        height: 50%;
-        width: 25%;
+        height: 45%;
+        width: 23%;
+        margin: 10px;
         /* border: 1px solid black; */
         /* text-align: center; */
         overflow: hidden;
@@ -703,8 +704,9 @@
     .aiDataScienceSection .aiTileContainer .aiTiles {
         /* background-color: red; */
         /* border: 1px solid black; */
-        width: 25%;
-        height: 50%;
+        height: 45%;
+        width: 23%;
+        margin: 10px;
         transition: border, background-color, color;
     }
     
@@ -829,12 +831,15 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        overflow: scroll;
+        scroll-behavior: smooth;
     }
     
     .webSection .webTileContainer .webTiles {
         /* border: 1px solid black; */
-        width: 25%;
-        height: 50%;
+        height: 45%;
+        width: 23%;
+        margin: 10px;
         display: flex;
         flex-wrap: center;
         justify-content: center;
@@ -887,6 +892,14 @@
     
     #webTile-8 {
         background-image: url("../data/webpageRepoProject.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: var(--text-color-dark);
+    }
+    
+    #webTile-9 {
+        background-image: url("../data/webPagePhp.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
