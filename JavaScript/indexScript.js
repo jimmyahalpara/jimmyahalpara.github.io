@@ -7,6 +7,8 @@ let animateFinalTalk = false;
 let aboutMeInFocus = false;
 let hideArrow = true;
 let shownNavigatorHelp = false;
+let animateTiles = true;
+
 
 let mousePointer = document.getElementById("mousePointer")
 mousePointer.classList.add("cursorLight")
@@ -38,7 +40,8 @@ function cursorShrink() {
     mousePointer.style.height = "20px"
     mousePointer.style.width = "20px"
     mousePointer.style.borderRadius = "10px"
-
+        // we call this function on mouseout of tiles, so we again start animation
+    animateTiles = true;
 }
 
 function cursorExpandLarge() {
@@ -65,6 +68,8 @@ function customCursor(height, width, radius) {
     mousePointer.style.height = height + "px";
     mousePointer.style.width = width + "px";
     mousePointer.style.borderRadius = radius + "px";
+    // as we use call this function when hovering over tiles, so its best place to stop animation.
+    animateTiles = false;
 }
 
 // code related to navigator
@@ -842,13 +847,15 @@ positionsWeb = [0, 200];
 webSectionPosition = 0;
 sign = 1
 setInterval(() => {
-    sec = document.querySelector(".webSection .webTileContainer");
+    if (animateTiles) {
+        sec = document.querySelector(".webSection .webTileContainer");
 
-    if (webSectionPosition == 1) {
-        sign = -1
-    } else if (webSectionPosition == 0) {
-        sign = 1
+        if (webSectionPosition == 1) {
+            sign = -1
+        } else if (webSectionPosition == 0) {
+            sign = 1
+        }
+        sec.scrollBy(0, 200 * sign);
+        webSectionPosition += sign;
     }
-    sec.scrollBy(0, 200 * sign);
-    webSectionPosition += sign;
-}, 5000);
+}, 2000);
