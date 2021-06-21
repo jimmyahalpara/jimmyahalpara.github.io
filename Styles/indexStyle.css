@@ -906,6 +906,14 @@
         background-color: var(--text-color-dark);
     }
     
+    #webTile-10 {
+        background-image: url("../data/webpageChromeExtension.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: var(--text-color-dark);
+    }
+    
     .webSection .webTileContainer .webTileText {
         padding: 20px 20px 0px 20px;
         display: block;
