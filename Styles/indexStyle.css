@@ -1132,9 +1132,9 @@
         border: 2px solid var(--text-color-dark);
         /* border-radius: 90px; */
         border-radius: 70px;
-        margin: 10px 5px;
-        height: 47%;
-        width: 12.5%;
+        margin: 2px 5px;
+        height: 30%;
+        width: 9%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1145,8 +1145,8 @@
     }
     
     .skillSection .skillContainer .skillTiles img {
-        max-width: 80%;
-        max-height: 90%;
+        max-width: 65%;
+        max-height: 65%;
     }
     
     .skillSection .downArrow {
