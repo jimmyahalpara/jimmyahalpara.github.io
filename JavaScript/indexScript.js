@@ -809,7 +809,7 @@ function certificateOpen() {
 
 // Animate final talk
 
-ttstringListAbout = ["Oh Hi again          ", "thanks for staying.          ", "Seriously,\t\t\t it means a lot.    ", "One last favor?      ", "Can you please give feeback some to this website?    ", "You can contact me using page below.  ", "Good Day👍 😀   "]
+ttstringListAbout = ["Oh Hi again          ", "thanks for staying.          ", "Seriously,\t\t\t it means a lot.    ", "One last favor?      ", "Can you please give some feeback to this website?    ", "You can contact me using page below.  ", "Good Day👍 😀   "]
 ttstringListLengthAbout = ttstringListAbout.length;
 ttselectedStringAbout = 0
 
